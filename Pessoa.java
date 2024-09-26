@@ -1,11 +1,15 @@
 public class Pessoa {
         private double peso;
         private double altura;
+        private double imc;
+        private String categoria;
 
         // Construtor da classe Pessoa
         public Pessoa(double peso, double altura) {
             this.peso = peso;
             this.altura = altura;
+            this.imc = 0;
+            this.categoria = "";
         }
 
         // Insere o valor de entrada no atributo peso da classe
@@ -35,6 +39,22 @@ public class Pessoa {
             return resultadoIMC;
         }
 
+    public void setImc(double imc) {
+        this.imc = imc;
+    }
+
+    public double getImc() {
+            return imc;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
         // Retorna a classificação com base no imc calculado
         public String informarIMC(double imc) {
             if(imc < 18.5){
@@ -53,8 +73,7 @@ public class Pessoa {
         }
 
         // Imprime as informações da pessoa
-        public void imprimirInformaçõesDaPessoa() {
-            double imc = calcularIMC();
+        public void imprimirInformacoesDaPessoa() {
             System.out.println("Peso   => " + String.format("%.2f", peso));
             System.out.println("Altura => " + String.format("%.2f", altura));
             System.out.println("IMC = " + String.format("%.2f", imc));
