@@ -34,26 +34,29 @@ public class Pessoa {
 
         // Retorna o valor do IMC
         public double calcularIMC() {
-            double resultadoIMC = peso / (Math.pow(altura,2));
-
-            return resultadoIMC;
+            return  peso / (Math.pow(altura,2));
         }
+
         // Insere o valor de entrada no atributo imc da classe
         public void setImc(double imc) {
             this.imc = imc;
         }
+
         // Retorna o imc
         public double getImc() {
                 return imc;
         }
+
         // Insere o valor de entrada no atributo categoria
         public void setCategoria(String categoria) {
             this.categoria = categoria;
         }
+
         // Retorna a categoria
         public String getCategoria() {
             return categoria;
         }
+
         // Retorna a classificação com base no imc calculado
         public String informarIMC(double imc) {
             if(imc < 18.5){
