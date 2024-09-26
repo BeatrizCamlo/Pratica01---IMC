@@ -1,18 +1,25 @@
 import java.util.Scanner;
 
 public class CalculaIMCView {
+
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         System.out.print("Digite o peso: ");
-        double peso = sc.nextDouble();
+        double pesoEntrada = input.nextDouble();
 
         System.out.print("Digite a altura: ");
-        double altura = sc.nextDouble();
+        double alturaEntrada = input.nextDouble();
 
-        Pessoa pessoa = new Pessoa(peso,altura);
+        Pessoa pessoa = new Pessoa(pesoEntrada, alturaEntrada);
 
-        pessoa.imprimirInformaçõesDaPessoa();
+        double imc = pessoa.calcularIMC();
+        pessoa.setImc(imc);
+
+        String categoria = pessoa.informarIMC(pessoa.getImc());
+        pessoa.setCategoria(categoria);
+
+        pessoa.imprimirInformacoesDaPessoa();
     }
 }
