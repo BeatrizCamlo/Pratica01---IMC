@@ -38,27 +38,26 @@ public class Pessoa {
 
             return resultadoIMC;
         }
-
-    public void setImc(double imc) {
-        this.imc = imc;
-    }
-
-    public double getImc() {
-            return imc;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
+        // Insere o valor de entrada no atributo imc da classe
+        public void setImc(double imc) {
+            this.imc = imc;
+        }
+        // Retorna o imc
+        public double getImc() {
+                return imc;
+        }
+        // Insere o valor de entrada no atributo categoria
+        public void setCategoria(String categoria) {
+            this.categoria = categoria;
+        }
+        // Retorna a categoria
+        public String getCategoria() {
+            return categoria;
+        }
         // Retorna a classificação com base no imc calculado
         public String informarIMC(double imc) {
             if(imc < 18.5){
-               return "Pessoa Abaixo do peso";
+                return "Pessoa Abaixo do peso";
             }else if ((imc >= 18.5) && (imc <= 24.9)) {
                 return "Pessoa com Peso normal";
             } else if ((imc > 24.9) && (imc <= 29.9)) {
@@ -77,7 +76,7 @@ public class Pessoa {
             System.out.println("Peso   => " + String.format("%.2f", peso));
             System.out.println("Altura => " + String.format("%.2f", altura));
             System.out.println("IMC = " + String.format("%.2f", imc));
-            System.out.println(informarIMC(imc));
+            System.out.println(categoria);
 
         }
 }
